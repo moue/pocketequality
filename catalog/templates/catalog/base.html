@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  {% block meta %}
+  <title>Pocket Equality</title>
+  <meta name="description" content="Women's Fashion with Real Functional Pockets">
+  <meta name="author" content="Sharon Zhou and Yuqi Hou">
+  {% endblock %}
+  
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="{% static 'catalog/css/main.css' %}">
+</head>
+
+<body class="wrapper">
+{% include 'catalog/partials/header.html' %}
+
+<div class="main">
+{% block content %}
+{% endblock %}
+</div>
+
+{% include 'catalog/partials/footer.html' %}
+
+</body>
+</html>
